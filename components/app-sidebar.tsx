@@ -17,7 +17,7 @@ export function AppSidebar() {
     const [isLoggingOut, setIsLoggingOut] = useState(false);
 
     // No mostrar sidebar en la página de login
-    if (pathname === "/login") return null;
+    if (pathname?.startsWith("/login")) return null;
 
     const handleLogout = async () => {
         setIsLoggingOut(true);
